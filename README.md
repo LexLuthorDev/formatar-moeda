@@ -24,6 +24,7 @@ Opções de Moeda
 A biblioteca suporta várias opções de moeda. Aqui estão algumas das moedas suportadas e seus códigos:
 
 BRL: Real Brasileiro
+RT: Moeda da empresa Rede Trade
 USD: Dólar Americano
 EUR: Euro
 ... (adicionar outras moedas, se necessário)
