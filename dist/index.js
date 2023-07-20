@@ -1,5 +1,5 @@
-
-module.exports.formatarMoeda = function (valor, moeda) {
+(function (global) {
+  function formatarMoeda(valor, moeda) {
     const formatosMoeda = {
       'BRL': {
         simbolo: 'R$',
@@ -41,9 +41,18 @@ module.exports.formatarMoeda = function (valor, moeda) {
       .replace(/\./g, formato.separadorMilhares)
       .replace(/,/g, formato.separadorDecimal);
   }
-  
-  // Exemplos de uso:
-  //console.log(formatarMoeda(100, 'BRL')); // Output: R$ 100,00
-  //console.log(formatarMoeda(50, 'USD')); // Output: US$ 50,00
-  //console.log(formatarMoeda(30, 'EUR')); // Output: € 30,00
-  
+
+  // Exporta a função formatarMoeda dependendo do ambiente (Node.js ou Navegador)
+  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    // Ambiente Node.js (backend)
+    module.exports = formatarMoeda;
+  } else if (typeof define === 'function' && define.amd) {
+    // Ambiente AMD (ex: RequireJS)
+    define([], function () {
+      return formatarMoeda;
+    });
+  } else {
+    // Ambiente Navegador (front-end)
+    global.formatarMoeda = formatarMoeda;
+  }
+})(this);
