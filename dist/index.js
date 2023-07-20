@@ -1,5 +1,4 @@
-// Definição da função formatarMoeda
-const formatarMoeda = function (valor, moeda) {
+function formatarMoeda(valor, moeda) {
   const formatosMoeda = {
     'BRL': {
       simbolo: 'R$',
@@ -40,17 +39,18 @@ const formatarMoeda = function (valor, moeda) {
     .replace(formato.simbolo, `${formato.simbolo} `)
     .replace(/\./g, formato.separadorMilhares)
     .replace(/,/g, formato.separadorDecimal);
-};
+}
 
 // Exemplos de uso:
 console.log(formatarMoeda(100, 'BRL')); // Output: R$ 100,00
 console.log(formatarMoeda(50, 'USD'));  // Output: US$ 50,00
 console.log(formatarMoeda(30, 'EUR'));  // Output: € 30,00
 
-// Exportar a função para uso em outros arquivos (no Node.js) ou para o navegador (no caso de bundlers como Webpack)
+// Exportar a função para uso em outros arquivos (no Node.js) ou para o navegador
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-  console.log(typeof module);
+  // Estamos no Node.js
   module.exports = formatarMoeda;
-} else {
+} else if (typeof window !== 'undefined') {
+  // Estamos no navegador
   window.formatarMoeda = formatarMoeda;
 }
