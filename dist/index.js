@@ -49,6 +49,7 @@ console.log(formatarMoeda(30, 'EUR'));  // Output: € 30,00
 
 // Exportar a função para uso em outros arquivos (no Node.js) ou para o navegador (no caso de bundlers como Webpack)
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+  console.log(typeof module);
   module.exports = formatarMoeda;
 } else {
   window.formatarMoeda = formatarMoeda;
