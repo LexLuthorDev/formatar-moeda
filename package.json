@@ -1,0 +1,11 @@
+{
+  "name": "formatar-moeda",
+  "version": "1.0.2",
+  "description": "script simples para formatar moeda a partir de um valor e de uma moeda pré selecionada",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LexLuthor Dev",
+  "license": "ISC"
+}
