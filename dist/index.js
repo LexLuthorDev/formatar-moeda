@@ -14,13 +14,14 @@
   var suaBiblioteca = {
     // Implemente suas funções e métodos aqui
     formatarMoeda: function (valor, moeda) {
+      // Existing currency formats...
       const formatosMoeda = {
         'BRL': {
           simbolo: 'R$',
           separadorDecimal: ',',
           separadorMilhares: '.',
         },
-        'RT': {
+        'RT': { // Custom "RT" currency format
           simbolo: 'RT$',
           separadorDecimal: ',',
           separadorMilhares: '.',
@@ -38,28 +39,15 @@
         // Adicione outros formatos de moeda aqui, se necessário
       };
   
-      if (typeof valor !== 'number') {
-        throw new Error('O valor fornecido não é um número.');
-      }
-  
       if (!formatosMoeda[moeda]) {
         throw new Error('Moeda não suportada.');
       }
   
       const formato = formatosMoeda[moeda];
-      const valorFormatado = valor.toLocaleString('pt-BR', {
-        style: 'currency',
-        currency: moeda,
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      });
-  
-      // Substitui o símbolo e os separadores pelos definidos no objeto formatosMoeda
-      return valorFormatado
-        .replace(formato.simbolo, `${formato.simbolo} `)
-        .replace(/\./g, formato.separadorMilhares)
-        .replace(/,/g, formato.separadorDecimal);
-    }
+      const partes = valor.toFixed(2).split('.');
+      const valorFormatado = `${formato.simbolo} ${partes[0].replace(/\B(?=(\d{3})+(?!\d))/g, formato.separadorMilhares)}`;
+      return `${valorFormatado}${formato.separadorDecimal}${partes[1]}`;
+    },
   };
 
   return suaBiblioteca;
