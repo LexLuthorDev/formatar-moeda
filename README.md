@@ -42,3 +42,8 @@ Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para o
 Link via CDN
 
 https://cdn.jsdelivr.net/gh/LexLuthorDev/formatar-moeda@main/dist/index.js
+
+console.log(format.formatarMoeda(100, 'BRL')); // Output: R$ 100,00
+console.log(format.formatarMoeda(50, 'USD'));  // Output: US$ 50,00
+console.log(format.formatarMoeda(30, 'EUR'));  // Output: € 30,00
+console.log(format.formatarMoeda(120, 'RT'));  // Output: RT$ 120,00
