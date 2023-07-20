@@ -6,12 +6,12 @@
     module.exports = factory();
   } else {
     // Navegador
-    root.suaBiblioteca = factory();
+    root.format = factory();
   }
 })(typeof self !== 'undefined' ? self : this, function () {
   // Defina sua biblioteca aqui
 
-  var suaBiblioteca = {
+  var format = {
     // Implemente suas funções e métodos aqui
     formatarMoeda: function (valor, moeda) {
       // Existing currency formats...
@@ -50,6 +50,6 @@
     },
   };
 
-  return suaBiblioteca;
+  return format;
 });
 
