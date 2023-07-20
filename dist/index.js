@@ -41,11 +41,6 @@ function formatarMoeda(valor, moeda) {
     .replace(/,/g, formato.separadorDecimal);
 }
 
-// Exemplos de uso:
-console.log(formatarMoeda(100, 'BRL')); // Output: R$ 100,00
-console.log(formatarMoeda(50, 'USD'));  // Output: US$ 50,00
-console.log(formatarMoeda(30, 'EUR'));  // Output: € 30,00
-
 // Exportar a função para uso em outros arquivos (no Node.js) ou para o navegador
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
   // Estamos no Node.js
@@ -54,3 +49,8 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
   // Estamos no navegador
   window.formatarMoeda = formatarMoeda;
 }
+
+// Exemplos de uso (mantidos para referência):
+console.log(formatarMoeda(100, 'BRL')); // Output: R$ 100,00
+console.log(formatarMoeda(50, 'USD'));  // Output: US$ 50,00
+console.log(formatarMoeda(30, 'EUR'));  // Output: € 30,00
