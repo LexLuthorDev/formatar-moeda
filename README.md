@@ -38,3 +38,7 @@ Se você encontrar algum problema, tiver sugestões de melhorias ou quiser adici
 
 Licença
 Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter mais informações.
+
+Link via CDN
+
+https://cdn.jsdelivr.net/gh/LexLuthorDev/formatar-moeda@tree/main/dist
