@@ -41,4 +41,4 @@ Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para o
 
 Link via CDN
 
-https://cdn.jsdelivr.net/gh/LexLuthorDev/formatar-moeda@tree/main/dist
+https://cdn.jsdelivr.net/gh/LexLuthorDev/formatar-moeda@main/dist/index.js

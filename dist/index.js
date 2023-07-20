@@ -20,6 +20,11 @@
           separadorDecimal: ',',
           separadorMilhares: '.',
         },
+        'RT': {
+          simbolo: 'RT$',
+          separadorDecimal: ',',
+          separadorMilhares: '.',
+        },
         'USD': {
           simbolo: 'US$',
           separadorDecimal: '.',
